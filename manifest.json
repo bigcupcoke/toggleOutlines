@@ -1,0 +1,16 @@
+{
+    "name": "toggle outline",
+    "manifest_version":2,
+    "version": "1.0",
+    "description":  "所有元素加边线， 可以愉快的偷网页的布局啦~",
+    "browser_action": {
+       "default_icon": "icon.png" ,
+       "default_popup": "popup.html"
+    },
+    "content_scripts": [{
+        "js": ["outlines.js"],
+        "matches": [ "http://*/*", "https://*/*"],
+        "run_at": "document_end",
+        "all_frames": true
+    }]
+}
